@@ -53,7 +53,7 @@ setopt alwaystoend
 # Try to correct the spelling of commands
 setopt correct
 # https://github.com/robbyrussell/oh-my-zsh/issues/449
-setopt no_nomatch  
+setopt no_nomatch
 # Disable annoying confirm
 setopt rmstarsilent
 
@@ -110,8 +110,13 @@ alias dig='dig +short +noshort'
 alias dm='docker-machine'
 alias dc='docker-compose'
 
+# key bindings
+bindkey "\e[3~" delete-char       # Delete
+bindkey "^[^[[D" backward-word    # Word backup
+bindkey "^[^[[C" forward-word     # Word forward
+
 ### PATH
 export PATH=/usr/local/bin:/usr/sbin:/sbin:/usr/bin:/bin
-[[ -s "/Users/richard/.gvm/scripts/gvm" ]] && source "/Users/richard/.gvm/scripts/gvm"
+[[ -s "/Users/rickdgraaff/.gvm/scripts/gvm" ]] && source "/Users/rickdgraaff/.gvm/scripts/gvm"
 
 source ~/.zsh/zsh-autosuggestions
