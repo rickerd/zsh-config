@@ -2,6 +2,7 @@
 export EDITOR='vim'
 export GIT_EDITOR='vim'
 export SHELL='/bin/zsh'
+export NVM_DIR='/usr/local/opt/nvm'
 
 # Fix Locale
 export LC_ALL=en_US.UTF-8
@@ -115,8 +116,14 @@ bindkey "\e[3~" delete-char       # Delete
 bindkey "^[^[[D" backward-word    # Word backup
 bindkey "^[^[[C" forward-word     # Word forward
 
+# NVM Stuff
+
+if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+    . "$NVM_DIR/nvm.sh"
+fi
+
 ### PATH
 export PATH=/usr/local/bin:/usr/sbin:/sbin:/usr/bin:/bin
-[[ -s "/Users/rickdgraaff/.gvm/scripts/gvm" ]] && source "/Users/rickdgraaff/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 source ~/.zsh/zsh-autosuggestions
