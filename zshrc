@@ -103,13 +103,11 @@ alias ll='ls $LS_OPTIONS -lAhF'
 alias cd..="cd .."
 alias ..="cd .."
 alias projects="cd ~/projects/"
-alias phps='bin/phpspec'
-alias behat='bin/behat'
-alias prod='app/console -e=prod'
-alias dev='app/console -e=dev'
 alias dig='dig +short +noshort'
 alias dm='docker-machine'
 alias dc='docker-compose'
+alias current='git rev-parse --abbrev-ref HEAD'
+alias git-initial='CURRENT=$(current) && git checkout --orphan newBranch;git add -A;git commit -m "Initial commit";git branch -D $CURRENT;git branch -m $CURRENT;'
 
 # key bindings
 bindkey "\e[3~" delete-char       # Delete
